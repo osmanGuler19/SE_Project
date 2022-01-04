@@ -1,0 +1,149 @@
+{
+    "products" :[
+        {
+          "name": "Tomato",
+          "description": "Fresh Tomato From Field",
+          "price" : "15.00",
+          "quantity" : "50",
+          "quantityType" : "kg",
+          "category" : "Fruit"
+        },
+        {
+          "name": "Apple",
+          "description": "Fresh Apple From Field",
+          "price" : "12.00",
+          "quantity" : "50",
+          "quantityType" : "kg",
+          "category" : "Fruit"
+        },
+        {
+          "name": "Banana",
+          "description": "Fresh Banana From Field",
+          "price" : "17.00",
+          "quantity" : "30",
+          "quantityType" : "kg",
+          "category" : "Fruit"
+        },
+        {
+          "name": "Orange",
+          "description": "Fresh Orange From Field",
+          "price" : "7.00",
+          "quantity" : "21",
+          "quantityType" : "kg",
+          "category" : "Fruit"
+        },
+        {
+          "name": "Lettuce",
+          "description": "Fresh Lettuce From Field",
+          "price" : "10.00",
+          "quantity" : "89",
+          "quantityType" : "piece",
+          "category" : "Vegatable"
+        },
+        {
+          "name": "Potato",
+          "description": "Fresh Potato From Field",
+          "price" : "18.00",
+          "quantity" : "5",
+          "quantityType" : "kg",
+          "category" : "Vegatable"
+        },
+        {
+          "name": "Carrot",
+          "description": "Fresh Carrot From Field",
+          "price" : "15.00",
+          "quantity" : "46",
+          "quantityType" : "kg",
+          "category" : "Vegatable"
+        },
+        {
+          "name": "Onion",
+          "description": "Fresh Onion From Field",
+          "price" : "9.00",
+          "quantity" : "120",
+          "quantityType" : "kg",
+          "category" : "Vegatable"
+        },
+        {
+          "name": "Milk",
+          "description": "Fresh Milk From Cows",
+          "price" : "22.00",
+          "quantity" : "10",
+          "quantityType" : "piece",
+          "category" : "Dairy Products"
+        },
+        {
+          "name": "Yoghurt",
+          "description": "Fresh Yoghurt From Farm",
+          "price" : "25.00",
+          "quantity" : "17",
+          "quantityType" : "piece",
+          "category" : "Dairy Products"
+        },
+        {
+          "name": "Cheese",
+          "description": "Fresh Cheese From Farm",
+          "price" : "40.00",
+          "quantity" : "50",
+          "quantityType" : "kg",
+          "category" : "Dairy Products"
+        },
+        {
+          "name": "Butter",
+          "description": "Fresh Butter From Farm",
+          "price" : "90.00",
+          "quantity" : "23",
+          "quantityType" : "kg",
+          "category" : "Dairy Products"
+        },
+        {
+          "name": "Bleach",
+          "description": "Best Bleach EVER!",
+          "price" : "15.00",
+          "quantity" : "67",
+          "quantityType" : "piece",
+          "category" : "Cleaning Products"
+        },
+        {
+          "name": "Detergent",
+          "description": "Best Detergent EVER!",
+          "price" : "35.00",
+          "quantity" : "54",
+          "quantityType" : "piece",
+          "category" : "Cleaning Products"
+        },
+        {
+          "name": "Soap",
+          "description": "Best Soap EVER!",
+          "price" : "2.00",
+          "quantity" : "200",
+          "quantityType" : "piece",
+          "category" : "Cleaning Products"
+        },
+        {
+          "name": "SmartPhone",
+          "description": "Most Technological SmartPhone!",
+          "price" : "16299.00",
+          "quantity" : "17",
+          "quantityType" : "piece",
+          "category" : "Electronic"
+        },
+        {
+          "name": "TV",
+          "description": "Most Technological TV!",
+          "price" : "8999.00",
+          "quantity" : "18",
+          "quantityType" : "piece",
+          "category" : "Electronic"
+        },
+        {
+          "name": "Laptop",
+          "description": "Most Technological Laptop!",
+          "price" : "12400.00",
+          "quantity" : "19",
+          "quantityType" : "piece",
+          "category" : "Electronic"
+        }
+    
+      ]
+  }

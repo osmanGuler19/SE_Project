@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gotur/auth/view/login.dart';
-
+import 'package:build_runner/build_runner.dart';
 void main() {
   runApp(const Login());
 }

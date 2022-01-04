@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "manager@gmail.com",
+            "role": "manager",
+            "password": "password",
+            "phone": "123456789"
+        },
+        {
+            "id": 2,
+            "name": "Ervin Howell",
+            "username": "Antonette",
+            "email": "user@gmail.com",
+            "role": "user",
+            "password": "password",
+            "phone": "123456789"
+        }
+        ]
+}
