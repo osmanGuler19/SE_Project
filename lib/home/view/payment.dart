@@ -4,16 +4,16 @@ import 'package:flutter_credit_card/credit_card_form.dart';
 import 'package:flutter_credit_card/credit_card_model.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
-void main() => runApp(MySample());
+//void main() => runApp(MySample());
 
-class MySample extends StatefulWidget {
+class Payment extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return MySampleState();
+    return PaymentState();
   }
 }
 
-class MySampleState extends State<MySample> {
+class PaymentState extends State<Payment> {
   String cardNumber = '';
   String expiryDate = '';
   String cardHolderName = '';
@@ -38,7 +38,6 @@ class MySampleState extends State<MySample> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Credit Card View Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -53,7 +52,7 @@ class MySampleState extends State<MySample> {
                     fit: BoxFit.fill,
                   )
                 : null,
-            color: Colors.black,
+            color: Colors.grey[350],
           ),
           child: SafeArea(
             child: Column(
@@ -141,48 +140,6 @@ class MySampleState extends State<MySample> {
                         ),
                         const SizedBox(
                           height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            const Text(
-                              'Glassmorphism',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
-                            ),
-                            Switch(
-                              value: useGlassMorphism,
-                              inactiveTrackColor: Colors.grey,
-                              activeColor: Colors.white,
-                              activeTrackColor: Colors.green,
-                              onChanged: (bool value) => setState(() {
-                                useGlassMorphism = value;
-                              }),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            const Text(
-                              'Card Image',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
-                            ),
-                            Switch(
-                              value: useBackgroundImage,
-                              inactiveTrackColor: Colors.grey,
-                              activeColor: Colors.white,
-                              activeTrackColor: Colors.green,
-                              onChanged: (bool value) => setState(() {
-                                useBackgroundImage = value;
-                              }),
-                            ),
-                          ],
                         ),
                         const SizedBox(
                           height: 20,

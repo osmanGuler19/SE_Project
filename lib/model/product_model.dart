@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+part 'product_model.g.dart';
 
 @JsonSerializable()
 class Product {
@@ -27,4 +28,7 @@ class Product {
     this.color,
     this.size,
   });
+  factory Product.fromJson(Map<String, dynamic> json) =>
+      _$ProductFromJson(json);
+  Map<String, dynamic> toJson() => _$ProductToJson(this);
 }

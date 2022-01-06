@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gotur/main.dart';
+
+void main() {
+  runApp(Login());
+}
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -9,7 +12,6 @@ class Login extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       body: Container(
-        width: double.infinity,
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
           Colors.orange[900]!,
