@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(Login());
-}
-
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
