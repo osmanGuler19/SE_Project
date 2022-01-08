@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gotur/view/home_view.dart';
+import 'package:gotur/view/manager_screen.dart';
 import 'package:gotur/viewmodel/productViewModel.dart';
+import 'package:gotur/viewmodel/userViewModel.dart';
 import 'package:provider/provider.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -9,7 +12,10 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final vm = Provider.of<ProductViewModel>(context);
-    print(vm.products[0].name);
+    final vu = Provider.of<UserViewModel>(context);
+
+    TextEditingController emailController = TextEditingController();
+    TextEditingController passwordController = TextEditingController();
     return MaterialApp(
         home: Scaffold(
       body: Container(
@@ -79,8 +85,9 @@ class Login extends StatelessWidget {
                                         bottom: BorderSide(
                                             color: Colors.grey[200]!))),
                                 child: TextField(
+                                  controller: emailController,
                                   decoration: InputDecoration(
-                                      hintText: "Email or Phone number",
+                                      hintText: "Email",
                                       hintStyle: TextStyle(color: Colors.grey),
                                       border: InputBorder.none),
                                 ),
@@ -92,6 +99,7 @@ class Login extends StatelessWidget {
                                         bottom: BorderSide(
                                             color: Colors.grey[200]!))),
                                 child: TextField(
+                                  controller: passwordController,
                                   decoration: InputDecoration(
                                       hintText: "Password",
                                       hintStyle: TextStyle(color: Colors.grey),
@@ -111,23 +119,35 @@ class Login extends StatelessWidget {
                         SizedBox(
                           height: 40,
                         ),
-                        Container(
-                          height: 50,
-                          margin: EdgeInsets.symmetric(horizontal: 50),
-                          decoration: BoxDecoration(
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size.fromHeight(50),
+                            primary: Colors.orange[900],
+                            shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
-                              color: Colors.orange[900]),
+                            ),
+                          ),
+                          onPressed: () async {
+                            await vu.checkUser(
+                                emailController.text, passwordController.text);
+                            if (vu.currentUser == null) {
+                              Fluttertoast.showToast(
+                                  msg: 'Kullanıcı Bulunamadı');
+                            }
+                            if (vu.isManager()) {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (_) => ManagerScreen()));
+                            } else {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (_) => HomeView()));
+                            }
+                          },
                           child: Center(
-                            child: ElevatedButton(
-                              onPressed: () => Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (_) => HomeView())),
-                              child: Text(
-                                "Login",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),

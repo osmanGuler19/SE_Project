@@ -1,7 +1,7 @@
 part 'user_model.g.dart';
 
 class User {
-  String id;
+  int id;
   String name;
   String email;
   String password;
