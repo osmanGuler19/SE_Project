@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'view/login.dart';
-import 'package:gotur/viewmodel/productViewModel.dart';
-import 'package:gotur/viewmodel/userViewModel.dart';
+import 'viewmodel/productViewModel.dart';
+import 'viewmodel/userViewModel.dart';
 import 'package:provider/provider.dart';
 
-void main() => runApp(MyApp());
+void main() async => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    print('uygulama açıldı');
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<ProductViewModel>(
@@ -18,11 +17,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<UserViewModel>(create: (_) => UserViewModel()),
       ],
       child: MaterialApp(
-        initialRoute: '/',
-        routes: {
-          '/': (context) => Login(),
-        },
-        debugShowCheckedModeBanner: false,
+        home: Login(),
       ),
     );
   }

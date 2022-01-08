@@ -3,146 +3,167 @@
         {
           "name": "Tomato",
           "description": "Fresh Tomato From Field",
-          "price" : "15.00",
-          "quantity" : "50",
+          "price" : 15.00,
+          "quantity" : 50,
           "quantityType" : "kg",
-          "category" : "Fruit"
+          "category" : "Fruit",
+          "imagePath" : "assets/tomato.jpeg"
         },
         {
           "name": "Apple",
           "description": "Fresh Apple From Field",
-          "price" : "12.00",
-          "quantity" : "50",
+          "price" : 12.00,
+          "quantity" : 50,
           "quantityType" : "kg",
-          "category" : "Fruit"
+          "category" : "Fruit",
+          "imagePath" : "assets/apple.jpeg"
         },
         {
           "name": "Banana",
           "description": "Fresh Banana From Field",
-          "price" : "17.00",
-          "quantity" : "30",
+          "price" : 17.00,
+          "quantity" : 30,
           "quantityType" : "kg",
-          "category" : "Fruit"
+          "category" : "Fruit",
+          "imagePath" : "assets/banana.jpeg"
         },
         {
           "name": "Orange",
           "description": "Fresh Orange From Field",
-          "price" : "7.00",
-          "quantity" : "21",
+          "price" : 7.00,
+          "quantity" : 21,
           "quantityType" : "kg",
-          "category" : "Fruit"
+          "category" : "Fruit",
+          "imagePath" : "orange.jpeg"
         },
         {
           "name": "Lettuce",
           "description": "Fresh Lettuce From Field",
-          "price" : "10.00",
-          "quantity" : "89",
+          "price" : 10.00,
+          "quantity" : 89,
           "quantityType" : "piece",
-          "category" : "Vegatable"
+          "category" : "Vegatable",
+          "imagePath" : "assets/lettuce.jpeg"
         },
         {
           "name": "Potato",
           "description": "Fresh Potato From Field",
-          "price" : "18.00",
-          "quantity" : "5",
+          "price" : 18.00,
+          "quantity" : 5,
           "quantityType" : "kg",
-          "category" : "Vegatable"
+          "category" : "Vegatable",
+          "imagePath" : "assets/potato.jpeg"
         },
         {
           "name": "Carrot",
           "description": "Fresh Carrot From Field",
-          "price" : "15.00",
-          "quantity" : "46",
+          "price" : 15.00,
+          "quantity" : 46,
           "quantityType" : "kg",
-          "category" : "Vegatable"
+          "category" : "Vegatable",
+          "imagePath" : "assets/carrot.jpeg"
         },
         {
           "name": "Onion",
           "description": "Fresh Onion From Field",
-          "price" : "9.00",
-          "quantity" : "120",
+          "price" : 9.00,
+          "quantity" : 120,
           "quantityType" : "kg",
-          "category" : "Vegatable"
+          "category" : "Vegatable",
+          "imagePath" : "assets/onion.jpeg"
         },
         {
           "name": "Milk",
           "description": "Fresh Milk From Cows",
-          "price" : "22.00",
-          "quantity" : "10",
+          "price" : 22.00,
+          "quantity" : 10,
           "quantityType" : "piece",
-          "category" : "Dairy Products"
+          "category" : "Dairy Products",
+          "imagePath" : "assets/milk.jpeg"
         },
         {
           "name": "Yoghurt",
           "description": "Fresh Yoghurt From Farm",
-          "price" : "25.00",
-          "quantity" : "17",
+          "price" : 25.00,
+          "quantity" : 17,
           "quantityType" : "piece",
-          "category" : "Dairy Products"
+          "category" : "Dairy Products",
+          "imagePath" : "assets/yoghurt.jpeg"
         },
         {
           "name": "Cheese",
           "description": "Fresh Cheese From Farm",
-          "price" : "40.00",
-          "quantity" : "50",
+          "price" : 40.00,
+          "quantity" : 50,
           "quantityType" : "kg",
-          "category" : "Dairy Products"
+          "category" : "Dairy Products",
+          "imagePath" : "assets/cheese.jpeg"
         },
         {
           "name": "Butter",
           "description": "Fresh Butter From Farm",
-          "price" : "90.00",
-          "quantity" : "23",
+          "price" : 90.00,
+          "quantity" : 23,
           "quantityType" : "kg",
-          "category" : "Dairy Products"
+          "category" : "Dairy Products",
+          "imagePath" : "assets/butter.jpeg"
         },
         {
           "name": "Bleach",
           "description": "Best Bleach EVER!",
-          "price" : "15.00",
-          "quantity" : "67",
+          "price" : 15.00,
+          "quantity" : 67,
           "quantityType" : "piece",
-          "category" : "Cleaning Products"
+          "category" : "Cleaning Products",
+          "imagePath" : "assets/bleach.jpeg"
         },
         {
           "name": "Detergent",
           "description": "Best Detergent EVER!",
-          "price" : "35.00",
-          "quantity" : "54",
+          "price" : 35.00,
+          "quantity" : 54,
           "quantityType" : "piece",
-          "category" : "Cleaning Products"
+          "category" : "Cleaning Products",
+          "imagePath" : "assets/detergent.jpeg"
         },
         {
           "name": "Soap",
           "description": "Best Soap EVER!",
-          "price" : "2.00",
-          "quantity" : "200",
+          "price" : 2.00,
+          "quantity" : 200,
           "quantityType" : "piece",
-          "category" : "Cleaning Products"
+          "category" : "Cleaning Products",
+          "imagePath" : "assets/soap.jpeg"
         },
         {
           "name": "SmartPhone",
           "description": "Most Technological SmartPhone!",
-          "price" : "16299.00",
-          "quantity" : "17",
+          "price" : 16299.00,
+          "quantity" : 17,
           "quantityType" : "piece",
-          "category" : "Electronic"
+          "category" : "Electronic",
+          "imagePath" : "assets/phone.jpeg"
+
         },
         {
           "name": "TV",
           "description": "Most Technological TV!",
-          "price" : "8999.00",
-          "quantity" : "18",
+          "price" : 8999.00,
+          "quantity" : 18,
           "quantityType" : "piece",
-          "category" : "Electronic"
+          "category" : "Electronic",
+          "imagePath" : "assets/tv.jpeg"
+
         },
         {
           "name": "Laptop",
           "description": "Most Technological Laptop!",
-          "price" : "12400.00",
-          "quantity" : "19",
+          "price" : 12400.00,
+          "quantity" : 19,
           "quantityType" : "piece",
-          "category" : "Electronic"
+          "category" : "Electronic",
+          "imagePath" : "assets/computer.jpeg"
+
         }
     
       ]

@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:gotur/view/home_view.dart';
+import 'package:gotur/viewmodel/productViewModel.dart';
+import 'package:provider/provider.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final vm = Provider.of<ProductViewModel>(context);
+    print(vm.products[0].name);
     return MaterialApp(
         home: Scaffold(
       body: Container(
@@ -113,11 +118,16 @@ class Login extends StatelessWidget {
                               borderRadius: BorderRadius.circular(50),
                               color: Colors.orange[900]),
                           child: Center(
-                            child: Text(
-                              "Login",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                            child: ElevatedButton(
+                              onPressed: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (_) => HomeView())),
+                              child: Text(
+                                "Login",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
                         ),
