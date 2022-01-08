@@ -46,8 +46,13 @@ class HomeView extends StatelessWidget {
             ),
             Expanded(
               child: Consumer<ProductViewModel>(builder: (_, a, child) {
-                a.getProductCard();
-                return getGridView(context, a.productcardlist);
+                List<ProductCard> p = [];
+                for (var i = 0; i < a.products.length; i++) {
+                  p.add(ProductCard(
+                    product: a.products[i],
+                  ));
+                }
+                return getGridView(context, p);
               }),
             )
           ],

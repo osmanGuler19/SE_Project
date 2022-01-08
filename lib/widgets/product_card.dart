@@ -5,21 +5,8 @@ import 'package:gotur/viewmodel/productViewModel.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
-  final String imagePath;
-  final String title;
-  final String description;
-  final double price;
-  final int quantity;
 
-  const ProductCard(
-      {Key? key,
-      required this.product,
-      required this.imagePath,
-      required this.title,
-      required this.description,
-      required this.price,
-      required this.quantity})
-      : super(key: key);
+  const ProductCard({Key? key, required this.product}) : super(key: key);
 
   //Buraya generic bir yapıda ürün için widget yazacağız.
   @override
@@ -31,21 +18,21 @@ class ProductCard extends StatelessWidget {
         children: [
           Expanded(
               child: Image.asset(
-            imagePath,
+            product.imagePath,
             fit: BoxFit.contain,
           )),
           SizedBox(
             height: 10,
           ),
-          Text(title),
-          FittedBox(fit: BoxFit.scaleDown, child: Text(description)),
+          Text(product.name),
+          FittedBox(fit: BoxFit.scaleDown, child: Text(product.description)),
           SizedBox(
             height: 10,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(price.toString() + " TL"),
+              Text(product.price.toString() + " TL"),
               IconButton(
                   onPressed: () {
                     vm.addToShoppingCard(product);
