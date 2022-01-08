@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gotur/view/cart_view.dart';
+import 'package:gotur/view/shopping_card.dart';
 import 'package:gotur/viewmodel/productViewModel.dart';
 import 'package:gotur/widgets/product_card.dart';
 import 'package:provider/provider.dart';
 import 'search_view.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class HomeView extends StatelessWidget {
           actions: [
             IconButton(
                 onPressed: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (_) => CartView())),
+                    .push(MaterialPageRoute(builder: (_) => ShoppingCard())),
                 icon: Icon(Icons.shopping_cart))
           ],
           leading: IconButton(

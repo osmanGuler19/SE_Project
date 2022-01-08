@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:gotur/model/product_model.dart';
+import 'package:provider/provider.dart';
+import 'package:gotur/viewmodel/productViewModel.dart';
 
 class ProductCard extends StatelessWidget {
+  final Product product;
   final String imagePath;
   final String title;
   final String description;
@@ -9,6 +13,7 @@ class ProductCard extends StatelessWidget {
 
   const ProductCard(
       {Key? key,
+      required this.product,
       required this.imagePath,
       required this.title,
       required this.description,
@@ -19,6 +24,7 @@ class ProductCard extends StatelessWidget {
   //Buraya generic bir yapıda ürün için widget yazacağız.
   @override
   Widget build(BuildContext context) {
+    final vm = Provider.of<ProductViewModel>(context);
     return Card(
       elevation: 5,
       child: Column(
@@ -36,7 +42,17 @@ class ProductCard extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Text(price.toString()),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(price.toString() + " TL"),
+              IconButton(
+                  onPressed: () {
+                    vm.addToShoppingCard(product);
+                  },
+                  icon: Icon(Icons.add_circle)),
+            ],
+          ),
         ],
       ),
     );

@@ -12,12 +12,15 @@ class ProductViewModel extends ChangeNotifier {
   late List<Product> products;
   late List<ProductCard> productcardlist;
   late List<String> categories;
+  late List<Product> shoppingcard;
+  int totalAmount = 0;
 
   ProductViewModel() {
     print('create product view model');
     products = [];
     productcardlist = [];
     categories = ['All'];
+    shoppingcard = [];
     fetchProducts();
   }
 
@@ -46,6 +49,7 @@ class ProductViewModel extends ChangeNotifier {
     for (int i = 0; i < products.length; i++) {
       Product s = products[i];
       productcardlist.add(ProductCard(
+        product: s,
         price: s.price,
         title: s.name,
         description: s.description,
@@ -73,7 +77,19 @@ class ProductViewModel extends ChangeNotifier {
         }
       }
     }
-
+    notifyListeners();
     return productsByCategory;
+  }
+
+  void addToShoppingCard(Product product) {
+    shoppingcard.add(product);
+    totalAmount += product.price.toInt();
+    notifyListeners();
+  }
+
+  void deleteFromShoppingCard(Product product) {
+    shoppingcard.remove(product);
+    totalAmount -= product.price.toInt();
+    notifyListeners();
   }
 }
