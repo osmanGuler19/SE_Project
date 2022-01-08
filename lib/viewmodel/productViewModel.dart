@@ -26,10 +26,8 @@ class ProductViewModel extends ChangeNotifier {
 
   Future<void> fetchProducts() async {
     try {
-      print('fetch products');
       final String response =
           await rootBundle.loadString('assets/product.json');
-      print('bura');
       final data = await json.decode(response)['products'] as List;
       for (int i = 0; i < data.length; i++) {
         Product dummy = Product.fromJson(data[i]);
@@ -43,20 +41,6 @@ class ProductViewModel extends ChangeNotifier {
       print(e);
     }
     notifyListeners();
-  }
-
-  Future<void> getProductCard() async {
-    for (int i = 0; i < products.length; i++) {
-      Product s = products[i];
-      productcardlist.add(ProductCard(
-        product: s,
-        price: s.price,
-        title: s.name,
-        description: s.description,
-        imagePath: s.imagePath,
-        quantity: s.quantity,
-      ));
-    }
   }
 
   Future<void> getCategories() async {

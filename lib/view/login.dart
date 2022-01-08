@@ -16,8 +16,7 @@ class Login extends StatelessWidget {
 
     TextEditingController emailController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
-    return MaterialApp(
-        home: Scaffold(
+    return Scaffold(
       body: Container(
         decoration: BoxDecoration(
             gradient: LinearGradient(begin: Alignment.topCenter, colors: [
@@ -209,6 +208,6 @@ class Login extends StatelessWidget {
           ],
         ),
       ),
-    ));
+    );
   }
 }
