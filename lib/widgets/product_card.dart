@@ -41,6 +41,14 @@ class ProductCard extends StatelessWidget {
                         msg: "${product.name} ürünü Sepete Eklendi");
                   },
                   icon: Icon(Icons.add_circle)),
+              IconButton(
+                onPressed: () {
+                  Fluttertoast.showToast(
+                      msg: "${product.name} ürünü Favorilere Eklendi");
+                },
+                icon: Icon(Icons.star_border_outlined),
+                color: Colors.yellow[300],
+              ),
             ],
           ),
         ],

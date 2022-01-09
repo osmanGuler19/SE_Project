@@ -43,7 +43,7 @@ class Login extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    "Welcome Back",
+                    "Welcome Back to Götür",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ],

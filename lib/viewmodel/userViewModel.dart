@@ -17,7 +17,6 @@ class UserViewModel extends ChangeNotifier {
 
   Future<void> checkUser(String email, String password) async {
     final String response = await rootBundle.loadString('assets/users.json');
-    print('bura');
     final data = await json.decode(response)['users'] as List;
 
     for (int i = 0; i < data.length; i++) {
