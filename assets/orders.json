@@ -1,0 +1,31 @@
+{
+    "orders":[
+        {   "userId":1,
+            "orderId": "1",
+            "orderDate": "2017-01-01",
+            "orderTotal": "100.00",
+            "orderStatus": "Pending",
+            "orderItems": [
+                {
+                    "name": "Tomato",
+                    "description": "Fresh Tomato From Field",
+                    "price" : 15.00,
+                    "quantity" : 50,
+                    "quantityType" : "kg",
+                    "category" : "Fruit",
+                    "imagePath" : "assets/tomato.jpeg"
+                },
+                {
+                    "name": "Apple",
+                    "description": "Fresh Apple From Field",
+                    "price" : 12.00,
+                    "quantity" : 50,
+                    "quantityType" : "kg",
+                    "category" : "Fruit",
+                    "imagePath" : "assets/apple.jpeg"
+                }
+            ]
+        }
+    ]
+    
+}

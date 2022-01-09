@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gotur/view/shopping_card.dart';
+import '../model/product_model.dart';
 import 'package:gotur/viewmodel/productViewModel.dart';
 import 'package:gotur/widgets/product_card.dart';
 import 'package:provider/provider.dart';
-import 'search_view.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeView extends StatelessWidget {
@@ -13,6 +13,8 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final vm = Provider.of<ProductViewModel>(context);
     List<String> categories = vm.categories;
+    List<ProductCard> products = vm.productcardlist;
+
     print(categories[0]);
     return Scaffold(
         appBar: AppBar(
@@ -23,8 +25,9 @@ class HomeView extends StatelessWidget {
                 icon: Icon(Icons.shopping_cart))
           ],
           leading: IconButton(
-              onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (_) => const SearchPage())),
+              onPressed: () {
+                Fluttertoast.showToast(msg: "Arama Ekranına Gidildi!");
+              },
               icon: Icon(Icons.search)),
         ),
         body: Column(
@@ -39,20 +42,17 @@ class HomeView extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
                         child: Text(categories[index]),
-                        onPressed: () {},
+                        onPressed: () async {
+                          vm.getProductCard(
+                              vm.getProductsByCategory(categories[index]));
+                        },
                       ),
                     );
                   }),
             ),
             Expanded(
               child: Consumer<ProductViewModel>(builder: (_, a, child) {
-                List<ProductCard> p = [];
-                for (var i = 0; i < a.products.length; i++) {
-                  p.add(ProductCard(
-                    product: a.products[i],
-                  ));
-                }
-                return getGridView(context, p);
+                return getGridView(context, products);
               }),
             )
           ],

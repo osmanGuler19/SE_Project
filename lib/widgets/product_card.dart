@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gotur/model/product_model.dart';
 import 'package:provider/provider.dart';
 import 'package:gotur/viewmodel/productViewModel.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -36,6 +37,8 @@ class ProductCard extends StatelessWidget {
               IconButton(
                   onPressed: () {
                     vm.addToShoppingCard(product);
+                    Fluttertoast.showToast(
+                        msg: "${product.name} ürünü Sepete Eklendi");
                   },
                   icon: Icon(Icons.add_circle)),
             ],

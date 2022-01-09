@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gotur/viewmodel/productViewModel.dart';
 import 'package:provider/provider.dart';
+import 'package:gotur/view/payment.dart';
 
 class ShoppingCard extends StatelessWidget {
   const ShoppingCard({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class ShoppingCard extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 2,
+            height: MediaQuery.of(context).size.height * 0.7,
             child: ListView.builder(
               itemCount: vm.shoppingcard.length,
               itemBuilder: (context, index) {
@@ -45,7 +46,10 @@ class ShoppingCard extends StatelessWidget {
           ),
           ElevatedButton(
             child: Text('Buy'),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => Payment()));
+            },
           ),
         ],
       ),

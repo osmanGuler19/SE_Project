@@ -36,10 +36,10 @@ class ProductViewModel extends ChangeNotifier {
           categories.add(dummy.category);
         }
       }
-      print(data);
     } catch (e) {
       print(e);
     }
+    getProductCard(products);
     notifyListeners();
   }
 
@@ -49,7 +49,7 @@ class ProductViewModel extends ChangeNotifier {
     }
   }
 
-  Future<List<Product>> getProductsByCategory(String category) async {
+  List<Product> getProductsByCategory(String category) {
     List<Product> productsByCategory = [];
     if (category.toLowerCase() == 'all') {
       productsByCategory = products;
@@ -75,5 +75,15 @@ class ProductViewModel extends ChangeNotifier {
     shoppingcard.remove(product);
     totalAmount -= product.price.toInt();
     notifyListeners();
+  }
+
+  Future<void> getProductCard(List<Product> products) async {
+    productcardlist.clear();
+    for (int i = 0; i < products.length; i++) {
+      Product s = products[i];
+      productcardlist.add(ProductCard(
+        product: s,
+      ));
+    }
   }
 }
