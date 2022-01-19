@@ -18,6 +18,7 @@ class HomeView extends StatelessWidget {
     print(categories[0]);
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.orange[900],
           actions: [
             IconButton(
                 onPressed: () => Navigator.of(context)
@@ -41,6 +42,8 @@ class HomeView extends StatelessWidget {
                     return Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.orange[900]),
                         child: Text(categories[index]),
                         onPressed: () async {
                           vm.getProductCard(

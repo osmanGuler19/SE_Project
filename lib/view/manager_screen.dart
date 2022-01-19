@@ -36,6 +36,7 @@ class ManagerScreen extends StatelessWidget {
     ];
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.orange[900],
         title: Center(child: Text('Manager Screen')),
       ),
       body: Center(
@@ -57,6 +58,7 @@ class ManagerScreen extends StatelessWidget {
                       color: Colors.blue[400],
                       elevation: 4,
                       child: ListTile(
+                        tileColor: Colors.orange[900],
                         leading: Icon(Icons.check_circle),
                         title: Text(useCases[index]),
                         onTap: () {

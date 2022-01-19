@@ -11,6 +11,7 @@ class ShoppingCard extends StatelessWidget {
     final vm = Provider.of<ProductViewModel>(context);
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.orange[900],
         title: Text('Shopping Card'),
       ),
       body: Column(
@@ -45,6 +46,7 @@ class ShoppingCard extends StatelessWidget {
             height: 10,
           ),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(primary: Colors.orange[900]),
             child: Text('Buy'),
             onPressed: () {
               Navigator.of(context)
